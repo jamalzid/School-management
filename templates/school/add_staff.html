@@ -1,0 +1,16 @@
+ {% extends "base.html" %} {% load static %} {% block body %} {% load bootstrap %} {% include "admin/admin_nav.html" %} {% include "admin/admin_sidenav.html" %}
+
+
+<div class="mx-auto my-5" style="width: 500px;margin-left: 250px;">
+    <h2>Add New <span style='color:Blue;'>Staff</span></h2>
+    <form method="POST" class="post-form">
+        <div class=" ml-5">
+            {% csrf_token %} {{ form|bootstrap }}
+        </div>
+        <button type="submit" class="save btn btn-default">Add</button>
+    </form>
+
+</div>
+
+
+{% endblock body %}
