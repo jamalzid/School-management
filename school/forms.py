@@ -1,5 +1,5 @@
 from django import forms
-from .models import AdminHod,Staff,Student
+from .models import AdminHod,Staff,Student,Course
 
 class AddAdminForm(forms.ModelForm):
     class Meta:
@@ -20,3 +20,7 @@ class AddStudentForm(forms.ModelForm):
         model = Student
 
         fields = '__all__'
+class AddCourseForm(forms.ModelForm):
+    class Meta:
+        model=Course
+        fields='__all__'

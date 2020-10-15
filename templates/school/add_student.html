@@ -3,14 +3,13 @@
 
 <div class="mx-auto my-5" style="width: 500px;margin-left: 250px;">
     <h2>Add New <span style='color:Green;'>Student</span></h2>
-    <form method="POST" class="post-form">
+    <form method="POST" class="post-form" enctype="multipart/form-data" action=''>
         <div class=" ml-5">
 
             {% csrf_token %} {{ form|bootstrap }}
         </div>
         <button type="submit" class="save btn btn-default">Add</button>
     </form>
-
 </div>
 
 

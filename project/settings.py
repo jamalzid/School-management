@@ -158,7 +158,23 @@ MEDIAFILES_DIRS = [
     BASE_DIR / "media",
 ]
 
-AUTHENTICATION_BACKENDS = ('school.EmailBackend.EmailBackend',)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#login with email
+# AUTHENTICATION_BACKENDS = ('school.EmailBackend.EmailBackend',)
 
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
@@ -167,3 +183,5 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+LOGIN_REDIRECT_URL='school:index'

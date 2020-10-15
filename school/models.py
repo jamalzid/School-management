@@ -69,13 +69,13 @@ class Student(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
    
     gender = models.CharField(choices=Gender_Choices,max_length=6)
-    image = models.ImageField(
-    upload_to='media/profiles_pic/', default='static/img/student_icon.jpg',null=True,blank=True)
+    # image = models.ImageField(
+    # upload_to='media/profiles_pic/', default='static/img/student_icon.jpg',null=True,blank=True)
     adress=models.TextField()
-    session_start=models.DateField()
-    session_end = models.DateField()
-    created_at = models.DateField(auto_now_add=True)
-    updated_at = models.DateField(auto_now=True)
+    session_start=models.DateTimeField()
+    session_end = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     course=models.ForeignKey(Course,on_delete=models.CASCADE)
 
 
